@@ -1,0 +1,35 @@
+# dependencies
+fe/node_modules
+fe/.pnp
+fe/.pnp.js
+
+# testing
+fe/coverage
+
+# next.js
+fe/.next/
+fe/out/
+
+# production
+fe/build
+
+# misc
+fe/.DS_Store
+fe/*.pem
+
+# debug
+fe/npm-debug.log*
+fe/yarn-debug.log*
+fe/yarn-error.log*
+fe/.pnpm-debug.log*
+
+# local env files
+fe/.env*.local
+
+# vercel
+fe/.vercel
+
+
+be/.env
+be/vendor
+

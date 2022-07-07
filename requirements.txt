@@ -1,0 +1,26 @@
+## Tools
+    - Visual Studio Code
+        ** Vs Code Extension
+            - Tailwind CSS IntelliSense 
+            - Go Extension
+            - Prettier - Code formatter
+            - vscode-icons
+    - Postman (Testing API)
+    - Chrome (For Web Interface)
+
+## Fontend
+    - ReactJS (Nextjs)
+    - Tailwindcss (Untuk Styling Antarmuka)
+
+## Backend
+    - Golang (Programming leangue)
+    - Echo Framework
+    - Gorm 
+    - Driver Postgres
+    - Godotenv
+
+## Database
+    - Postgres SQL
+
+
+ 
