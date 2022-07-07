@@ -1,6 +1,7 @@
 import { SessionProvider, useSession } from "next-auth/react";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+import "../styles/globals.css";
+
 export default function App({
   Component,
   pageProps: { session, ...pageProps },
