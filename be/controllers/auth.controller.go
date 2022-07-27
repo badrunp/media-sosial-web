@@ -41,7 +41,7 @@ func (a *auth) Register(c echo.Context) error {
 
 	data.Password = utils.HashAndSalt([]byte(data.Password))
 
-	user, err = a.userService.CreateUser(data)
+	user, err  = a.userService.CreateUser(data)
 	if err != nil {
 		return helpers.ResJSON(c, http.StatusBadRequest, "Create user", nil, err)
 	}

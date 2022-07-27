@@ -4,24 +4,29 @@ import CredentialsProvider from "next-auth/providers/credentials";
 export default NextAuth({
   providers: [
     CredentialsProvider({
-      name: "Credentials",
-      credentials: {
-        username: {
-          label: "Username",
-          type: "text",
-          placeholder: "Username",
-        },
-        password: {
-          label: "Password",
-          type: "text",
-          placeholder: "Password",
-        },
-      },
-      async authorize() {
-        const user = { id: 1, name: "badrun", email: "bbadrunn@gmail.com" };
-        if (user) {
-          return user;
-        } else {
+      async authorize(credentials) {
+        try {
+          // const res = await fetch("http://localhost:8000/api/auth/login", {
+          //   method: "POST",
+          //   headers: {
+          //     "Content-Type": "application/json",
+          //   },
+          //   body: JSON.stringify({
+          //     email: credentials.email,
+          //     password: credentials.password,
+          //   }),
+          // });
+          // const json = await res.json();
+          // if (json.status == 200) {
+          //   return json.data;
+          // }
+          return {
+            name: "badrun",
+            email: "bbadrunn@gmail.com",
+            password: "123456",
+          };
+        } catch (error) {
+          console.log(error);
           return null;
         }
       },
