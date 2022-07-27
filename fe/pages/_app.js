@@ -103,7 +103,7 @@ function Guest({ children }) {
     return <p>loading.. guest</p>;
   }
 
-  if (status != "loading") { 
+  if (status != "loading") {
     if (status == "authenticated") {
       router.push("/");
       return;
