@@ -8,14 +8,14 @@ export default function Document() {
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
-          crossOrigin={true}
+          crossOrigin="true"
         />
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
           rel="stylesheet"
         ></link>
       </Head>
-      <body className="tracking-tight overflow-x-hidden font-inter text-gray-700">
+      <body className="tracking-tight overflow-x-hidden font-inter text-zinc-700">
         <Main />
         <NextScript />
       </body>

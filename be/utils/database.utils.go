@@ -30,6 +30,7 @@ func DBConnect(host string)(*gorm.DB, error){
 
 	fmt.Println("Database connected on port", port)
 	fmt.Println("ssl mode =", sslMode)
+
 	return db, err
 }
 

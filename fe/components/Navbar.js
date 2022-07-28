@@ -1,6 +1,6 @@
 import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
-import { types, useStore } from "../_app";
+import { types, useStore } from "pages/_app";
 
 export default function Navbar() {
   const { data: session } = useSession();
@@ -10,7 +10,7 @@ export default function Navbar() {
     dispatch({ type: types.SET_USER, payload: { user: null } });
     signOut({ redirect: false });
   };
-  
+
   return (
     <div className="flex justify-between items-center bg-gray-700 fixed top-0 left-0 w-full">
       <div className="flex">

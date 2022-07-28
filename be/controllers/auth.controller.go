@@ -66,7 +66,7 @@ func (a *auth) Login(c echo.Context) error {
 
 	user, err = a.userService.GetUserByEmail(data)
 	if err != nil {
-		return helpers.ResJSON(c, http.StatusBadRequest, "Email error", nil, "Email not register in sytem!")
+		return helpers.ResJSON(c, http.StatusBadRequest, "Email error", nil, "Email not register in system!")
 	}
 	
 	if !utils.ComparePasswords(user.Password, []byte(data.Password)){

@@ -1,9 +1,12 @@
 package routes
 
 import (
+	"net/http"
+
 	"github.com/badrunp/media-sosial-web/be/utils"
 	"github.com/go-playground/validator/v10"
 	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
 	"gorm.io/gorm"
 )
 
@@ -22,6 +25,11 @@ func NewRoutes(db *gorm.DB)*routes{
 func (r *routes) Init() *echo.Echo {
 	e := echo.New()
 
+	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
+		AllowOrigins: []string{"http://localhost:3000"},
+		AllowMethods: []string{http.MethodGet, http.MethodPut, http.MethodPost, http.MethodDelete},
+	}))
+	
 	e.Validator = &utils.Validator{Validation: validator.New()}
 	g := e.Group("/api")
 	HomeRoute(g, r.db).Init()

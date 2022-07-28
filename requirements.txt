@@ -10,10 +10,10 @@
 
 ## Fontend
     - ReactJS (Nextjs)
-    - Tailwindcss (Untuk Styling Antarmuka)
+    - Tailwindcss (Untuk Styling Interface)
 
 ## Backend
-    - Golang (Programming leangue)
+    - Golang (Programming leanguage)
     - Echo Framework
     - Gorm 
     - Driver Postgres
